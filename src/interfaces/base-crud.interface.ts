@@ -1,4 +1,4 @@
-// import { PaginationResponseDto } from '../dtos/pagination-response.dto';
+import { PaginationResponseInterface } from './pagination-response.interface';
 import { BaseCrudCreateParamsInterface } from './base-crud-create-params.interface';
 import { BaseCrudFindOneParamsInterface } from './base-crud-find-one-params.interface';
 import { BaseCrudFindAllParamsInterface } from './base-crud-find-all-params.interface';
@@ -12,9 +12,9 @@ export interface BaseCrudInterface<TEntity> {
   findOne: (
     params: BaseCrudFindOneParamsInterface<TEntity>
   ) => Promise<BaseCrudFindOneResponseType<TEntity>>;
-  // findAll: (
-  //   params: BaseCrudFindAllParamsInterface<TEntity>
-  // ) => Promise<PaginationResponseDto<TEntity>>;
+  findAll: (
+    params: BaseCrudFindAllParamsInterface<TEntity>
+  ) => Promise<PaginationResponseInterface<TEntity>>;
   update: (
     params: BaseCrudUpdateParamsInterface<TEntity>
   ) => Promise<BaseCrudFindOneResponseType<TEntity>>;
