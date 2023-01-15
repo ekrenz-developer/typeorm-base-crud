@@ -1,6 +1,6 @@
 import { BaseCrudBaseParamsInterface } from './base-crud-base-params.interface';
 
-export interface BaseCrudRemoveParamsInterface<TEntity>
+export interface BaseCrudDeleteParamsInterface<TEntity>
   extends BaseCrudBaseParamsInterface<TEntity> {
-  entity: TEntity;
+  id: number;
 }
