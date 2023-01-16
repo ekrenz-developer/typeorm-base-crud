@@ -1,5 +1,3 @@
-import { DeleteResult } from 'typeorm';
-
 import { PaginationResponseInterface } from './pagination-response.interface';
 import { BaseCrudCreateParamsInterface } from './base-crud-create-params.interface';
 import { BaseCrudFindOneParamsInterface } from './base-crud-find-one-params.interface';
@@ -21,9 +19,7 @@ export interface BaseCrudInterface<TEntity> {
   update: (
     params: BaseCrudUpdateParamsInterface<TEntity>
   ) => Promise<BaseCrudFindOneResponseType<TEntity>>;
-  delete: (
-    params: BaseCrudDeleteParamsInterface<TEntity>
-  ) => Promise<DeleteResult>;
+  delete: (params: BaseCrudDeleteParamsInterface<TEntity>) => Promise<boolean>;
   remove: (
     params: BaseCrudRemoveParamsInterface<TEntity>
   ) => Promise<BaseCrudFindOneResponseType<TEntity>>;
