@@ -32,7 +32,6 @@ export class BaseCrudService<TEntity extends BaseEntityInterface>
   }: BaseCrudCreateParamsInterface<TEntity>): Promise<TEntity> {
     try {
       this.logger.log(`${BaseCrudService.name}.create}`);
-      this.entityRepository.save;
       const newEntity: TEntity = await this.entityRepository.save(payload);
       return newEntity;
     } catch (e) {
