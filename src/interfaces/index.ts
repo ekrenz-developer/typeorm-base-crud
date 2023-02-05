@@ -1,4 +1,4 @@
-// base crud
+// base crud service
 export * from './base-crud.interface';
 export * from './base-crud-base-params.interface';
 export * from './base-crud-create-params.interface';
@@ -9,6 +9,14 @@ export * from './base-crud-remove-params.interface';
 export * from './base-crud-delete-params.interface';
 export * from './base-crud-restore-params.interface';
 export * from './base-entity.interface';
+
+// base crud operation service
+export * from './base-crud-operation-service.interface';
+export * from './base-crud-operation-service-base-params.interface';
+export * from './base-crud-operation-service-create-params.interface';
+export * from './base-crud-operation-service-find-all-params.interface';
+export * from '../types/base-crud-operation-service-find-one-params.type';
+export * from './base-crud-operation-service-update-params.interface';
 
 // pagination
 export * from './pagination-response.interface';

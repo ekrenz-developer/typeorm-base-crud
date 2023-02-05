@@ -23,8 +23,10 @@ export class PaginationMetaDto implements PaginationMetaInterface {
   // @ApiProperty()
   readonly hasNextPage: boolean;
 
-  constructor({ paginationOptions, itemCount }: PaginationMetaParamsInterface) {
-    const { page, take } = paginationOptions;
+  constructor({
+    paginationOptions: { page, take },
+    itemCount,
+  }: PaginationMetaParamsInterface) {
     this.page = page;
     this.take = take;
     this.itemCount = itemCount;

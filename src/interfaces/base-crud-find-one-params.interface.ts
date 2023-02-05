@@ -4,5 +4,5 @@ import { BaseCrudBaseFindParamsInterface } from './base-crud-base-find-params.in
 export interface BaseCrudFindOneParamsInterface<TEntity>
   extends BaseCrudBaseParamsInterface<TEntity>,
     BaseCrudBaseFindParamsInterface {
-  id: number;
+  id?: number;
 }
